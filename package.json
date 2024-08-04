@@ -1,0 +1,25 @@
+{
+  "name": "either-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/uuid": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@types/morgan": "^1.9.9",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "uuid": "^10.0.0",
+    "zod": "^3.23.8"
+  }
+}
