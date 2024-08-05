@@ -16,10 +16,10 @@ export const getUserByEmailController = async (req: Request, res: Response) => {
   const response = await getUserByEmailUsecase.run(email);
 
   response.fold({
-    fnLeft: (error) => {
+    fnError: (error) => {
       return internalErrorResponse(res, error.message);
     },
-    fnRight: (value) => {
+    fnOk: (value) => {
       return successResponse(res, value);
     },
   });

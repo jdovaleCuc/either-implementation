@@ -3,7 +3,7 @@ import { Router } from "../..";
 import { zodValidator } from "../../middlewares/zodValidator";
 import { getUserByEmailController } from "./getUserByEmail.controller";
 
-const userConfig: Router = {
+const userRouter: Router = {
   basePath: "/user",
   routes: [
     {
@@ -17,4 +17,4 @@ const userConfig: Router = {
   ],
 };
 
-export default userConfig;
+export default userRouter;
