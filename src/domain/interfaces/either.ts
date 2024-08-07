@@ -25,20 +25,20 @@ export class Either<T, E> {
     return this.error !== undefined;
   }
 
-  getValue(): T | undefined {
+  getValue(): T {
     if (!this.isOk()) {
-      throw new Error("can't access to a value in a not Ok instance");
+      throw new Error("Cannot access value in a non-Ok instance");
     }
 
-    return this.value;
+    return this.value!;
   }
 
-  getError(): E | undefined {
+  getError(): E {
     if (!this.isError()) {
-      throw new Error("can't access to a value in a not Error instance");
+      throw new Error("Cannot access error in a non-Error instance");
     }
 
-    return this.error;
+    return this.error!;
   }
 
   fold<R>(expressions: FoldExpressions<R, E, T>): R {
